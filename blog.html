@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Madhavaa Sai Kolluri — Cybersecurity Blog. Insights on Cloud Security, GRC, IAM, Threat Hunting, and Compliance.">
+  <title>Blog — Madhavaa Sai Kolluri</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== DYNAMIC ISLAND NAVIGATION ===== -->
+  <nav class="di" id="dynamicIsland">
+    <div class="di-pill" id="diPill">
+      <a href="index.html" class="di-brand">MSK<span class="di-dot">.</span></a>
+      <div class="di-links">
+        <a href="index.html#experience" class="di-link">Experience</a>
+        <a href="index.html#about" class="di-link">About</a>
+        <a href="index.html#skills" class="di-link">Skills</a>
+        <a href="blog.html" class="di-link active">Blog</a>
+        <a href="index.html#contact" class="di-link">Contact</a>
+      </div>
+      <div class="di-cta-wrap">
+        <button class="di-cta" onclick="downloadCV()">
+          <i data-lucide="download" style="width:13px;height:13px"></i>
+          Resume
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <i data-lucide="sun" class="icon-sun" style="width:18px;height:18px"></i>
+    <i data-lucide="moon" class="icon-moon" style="width:18px;height:18px"></i>
+  </button>
+
+  <!-- Mobile hamburger -->
+  <button class="mobile-hamburger" id="navHamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-overlay-inner">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="index.html#experience" class="mobile-link">Experience</a>
+      <a href="index.html#about" class="mobile-link">About</a>
+      <a href="index.html#skills" class="mobile-link">Skills</a>
+      <a href="blog.html" class="mobile-link">Blog</a>
+      <a href="index.html#contact" class="mobile-link">Contact</a>
+      <button class="mobile-cta" onclick="downloadCV()">Download Resume</button>
+    </div>
+  </div>
+
+  <!-- ===== BLOG HERO ===== -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="section-eyebrow">Insights</span>
+      <h1 class="blog-hero-title">Blog</h1>
+      <p class="blog-hero-sub">Thoughts on cybersecurity, cloud governance, risk management, and the evolving threat landscape.</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG FILTER TAGS ===== -->
+  <section class="blog-filters-section">
+    <div class="container">
+      <div class="blog-filters">
+        <button class="blog-filter active" data-filter="all">All Posts</button>
+        <button class="blog-filter" data-filter="cloud-security">Cloud Security</button>
+        <button class="blog-filter" data-filter="grc">GRC</button>
+        <button class="blog-filter" data-filter="iam">IAM</button>
+        <button class="blog-filter" data-filter="threat-hunting">Threat Hunting</button>
+        <button class="blog-filter" data-filter="compliance">Compliance</button>
+        <button class="blog-filter" data-filter="career">Career</button>
+        <button class="blog-filter" data-filter="tools">Tools & Tech</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG POSTS GRID ===== -->
+  <section class="blog-section">
+    <div class="container">
+      <!-- Dynamic posts rendered by JS from localStorage -->
+      <div class="blog-grid" id="blogDynamicGrid"></div>
+
+      <!-- Newsletter CTA -->
+      <div class="blog-newsletter" data-reveal>
+        <div class="blog-newsletter-inner">
+          <div class="blog-newsletter-icon">
+            <i data-lucide="mail" style="width:28px;height:28px"></i>
+          </div>
+          <h3>Stay in the Loop</h3>
+          <p>New articles on cybersecurity, cloud governance, and compliance — delivered when they drop.</p>
+          <a href="https://medium.com/@ogmadhavaa" target="_blank" rel="noopener noreferrer" class="btn btn-filled">
+            <i data-lucide="book-open" style="width:16px;height:16px"></i>
+            Follow on Medium
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul><li><a href="index.html">Home</a></li><li><a href="index.html#experience">Experience</a></li><li><a href="index.html#skills">Skills</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul><li><a href="blog.html">Blog</a></li><li><a href="#" onclick="downloadCV();return false;">Resume</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/kolluri-madhava-sai-4587a711a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://medium.com/@ogmadhavaa" target="_blank" rel="noopener noreferrer">Medium</a></li>
+            <li><a href="https://github.com/ogmadhavaa" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Time Zones</h4>
+          <ul class="clocks">
+            <li id="clock-cst"></li>
+            <li id="clock-est"></li>
+            <li id="clock-pst"></li>
+            <li id="clock-mst"></li>
+            <li id="clock-ist"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Madhavaa Sai Kolluri. All rights reserved.</p>
+        <a href="admin.html" class="footer-admin-link">
+          <i data-lucide="lock" style="width:12px;height:12px"></i>
+          Admin Dashboard
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Download Choice Modal -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="download-panel">
+      <button class="modal-x" onclick="closeDownloadModal()" aria-label="Close">
+        <i data-lucide="x" style="width:20px;height:20px"></i>
+      </button>
+      <div class="download-header">
+        <div class="download-icon-wrap">
+          <i data-lucide="file-down" style="width:32px;height:32px"></i>
+        </div>
+        <h3 class="download-title">Download Resume</h3>
+        <p class="download-subtitle">Choose your preferred format</p>
+      </div>
+      <div class="download-options">
+        <button class="download-option" onclick="downloadFile('pdf')">
+          <div class="download-opt-icon pdf-icon">PDF</div>
+          <div class="download-opt-info">
+            <span class="download-opt-name">Madhavaa_Sr. Info Sec_Analyst.pdf</span>
+            <span class="download-opt-desc">Best for viewing & sharing</span>
+          </div>
+        </button>
+        <button class="download-option" onclick="downloadFile('docx')">
+          <div class="download-opt-icon docx-icon">DOCX</div>
+          <div class="download-opt-info">
+            <span class="download-opt-name">Madhavaa_Sr. Info Sec_Analyst.docx</span>
+            <span class="download-opt-desc">Editable Word document</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/13096126327?text=Hi%20Madhavaa!%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect."
+     class="wa-fab" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" width="24" height="24"><path fill="currentColor" d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.132 6.742 3.054 9.378L1.054 31.29l6.166-1.962C9.78 30.992 12.78 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.318 22.614c-.39 1.1-1.932 2.014-3.16 2.28-.84.18-1.936.324-5.628-1.21-4.724-1.962-7.766-6.778-8.002-7.092-.226-.314-1.9-2.532-1.9-4.83s1.2-3.428 1.628-3.898c.39-.428.912-.624 1.386-.624.168 0 .32.008.455.015.428.019.643.046.925.717.353.838 1.213 2.95 1.317 3.166.106.217.177.47.035.756-.134.293-.2.476-.395.736-.194.26-.41.58-.585.778-.194.22-.396.46-.17.9.225.438 1.003 1.654 2.153 2.68 1.48 1.318 2.725 1.726 3.11 1.92.39.193.617.16.843-.097.234-.26.988-1.152 1.252-1.548.26-.396.52-.33.877-.197.36.13 2.275 1.074 2.665 1.27.39.194.65.292.746.452.093.16.093.918-.298 2.018z"/></svg>
+  </a>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    // ── Blog: Load published posts from GitHub CMS ──
+    (async function() {
+      const POSTS_KEY = 'blogPosts';
+      const GH_RAW = 'https://raw.githubusercontent.com/madhavaa07/msk-blog-data/main/posts.json';
+      const categoryLabels = {
+        'cloud-security': 'Cloud Security',
+        'grc': 'GRC',
+        'iam': 'IAM',
+        'threat-hunting': 'Threat Hunting',
+        'compliance': 'Compliance',
+        'career': 'Career',
+        'tools': 'Tools & Tech'
+      };
+      const categoryIcons = {
+        'cloud-security': 'cloud',
+        'grc': 'shield-check',
+        'iam': 'key',
+        'threat-hunting': 'radar',
+        'compliance': 'file-check',
+        'career': 'briefcase',
+        'tools': 'wrench'
+      };
+
+      function escapeHtml(str) {
+        const el = document.createElement('span');
+        el.textContent = str;
+        return el.innerHTML;
+      }
+
+      function formatDate(iso) {
+        return new Date(iso).toLocaleDateString('en-US', {
+          month: 'short', day: 'numeric', year: 'numeric'
+        });
+      }
+
+      // Fetch posts from GitHub (with localStorage fallback)
+      async function fetchPosts() {
+        try {
+          const res = await fetch(GH_RAW + '?t=' + Date.now());
+          if (res.ok) {
+            const data = await res.json();
+            localStorage.setItem(POSTS_KEY, JSON.stringify(data)); // cache
+            return data;
+          }
+        } catch (e) { console.warn('GitHub fetch failed:', e); }
+        // Fallback to localStorage cache
+        try { return JSON.parse(localStorage.getItem(POSTS_KEY)) || []; } catch { return []; }
+      }
+
+      // Check for scheduled posts that should be published
+      function checkScheduled(posts) {
+        const now = new Date();
+        posts.forEach(p => {
+          if (p.status === 'scheduled' && p.scheduleDate && new Date(p.scheduleDate) <= now) {
+            p.status = 'published';
+            p.publishedAt = p.scheduleDate;
+          }
+        });
+        return posts;
+      }
+
+      async function renderDynamicPosts() {
+        let posts = await fetchPosts();
+        posts = checkScheduled(posts);
+
+        if (posts.length === 0) return;
+
+        const dynamicGrid = document.getElementById('blogDynamicGrid');
+        if (!dynamicGrid) return;
+
+        // Show published posts first, then drafts as "Coming Soon"
+        const published = posts.filter(p => p.status === 'published');
+        const drafts = posts.filter(p => p.status === 'draft');
+        const ordered = [...published, ...drafts];
+
+        const dynamicHtml = ordered.map((post, idx) => {
+          const cat = categoryLabels[post.category] || post.category;
+          const icon = categoryIcons[post.category] || 'file-text';
+          const isPublished = post.status === 'published';
+          const hasImage = post.imageUrl && post.imageUrl.trim();
+          const imgSection = hasImage
+            ? `<div class="blog-card-img"><img src="${escapeHtml(post.imageUrl)}" alt="${escapeHtml(post.title)}" style="width:100%;height:100%;object-fit:cover"></div>`
+            : `<div class="blog-card-img"><div class="blog-card-placeholder"><i data-lucide="${icon}" style="width:32px;height:32px"></i></div></div>`;
+
+          const dateLabel = isPublished
+            ? formatDate(post.publishedAt || post.createdAt)
+            : 'Coming Soon';
+
+          const badge = isPublished
+            ? `<span class="blog-live-badge"><i data-lucide="circle-dot" style="width:10px;height:10px"></i> Live</span>`
+            : `<span class="blog-coming-badge">Coming Soon</span>`;
+
+          const clickAttr = isPublished
+            ? `onclick="openBlogPost('${post.id}')"`
+            : '';
+
+          const liveClass = isPublished ? 'blog-card-live' : '';
+          const cursorStyle = isPublished ? 'cursor:pointer;' : '';
+
+          return `
+            <article class="blog-card ${liveClass}" data-category="${post.category}" data-id="${post.id}" style="${cursorStyle}animation:blogFadeIn .5s ease both;animation-delay:${idx * 0.07}s" ${clickAttr}>
+              ${imgSection}
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag">${cat}</span>
+                  <span class="blog-date">
+                    <i data-lucide="calendar" style="width:12px;height:12px"></i>
+                    ${dateLabel}
+                  </span>
+                </div>
+                <h2 class="blog-card-title">${escapeHtml(post.title)}</h2>
+                <p class="blog-card-excerpt">${escapeHtml(post.excerpt)}</p>
+                <div class="blog-card-footer">
+                  <span class="blog-read-time">
+                    <i data-lucide="clock" style="width:12px;height:12px"></i>
+                    ${post.readTime} min read
+                  </span>
+                  ${badge}
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+
+        dynamicGrid.innerHTML = dynamicHtml;
+        lucide.createIcons();
+
+        // No data-reveal on dynamic cards — they use blogFadeIn animation directly
+      }
+
+      // Open blog post in reader view (uses cached posts from last fetch)
+      window.openBlogPost = function(id) {
+        let posts = [];
+        try { posts = JSON.parse(localStorage.getItem(POSTS_KEY)) || []; } catch {}
+        const post = posts.find(p => p.id === id);
+        if (!post) return;
+
+        const cat = categoryLabels[post.category] || post.category;
+        const date = formatDate(post.publishedAt || post.createdAt);
+
+        // Content is already HTML from the rich text editor
+        let content = post.content || `<p>${escapeHtml(post.excerpt)}</p>`;
+
+        const tags = (post.tags || []).map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('');
+
+        const overlay = document.createElement('div');
+        overlay.className = 'modal-overlay active';
+        overlay.id = 'blogReaderModal';
+        overlay.innerHTML = `
+          <div class="modal-panel" style="max-width:700px">
+            <button class="modal-x" onclick="this.closest('.modal-overlay').remove();document.body.style.overflow='';" aria-label="Close">
+              <i data-lucide="x" style="width:20px;height:20px"></i>
+            </button>
+            <div class="modal-header">
+              <span class="modal-tag">${cat}</span>
+              <h2 class="modal-title" style="font-size:1.4rem">${escapeHtml(post.title)}</h2>
+              <span class="modal-date">${date} · ${post.readTime} min read</span>
+            </div>
+            <div class="blog-reader-content" style="line-height:1.8;color:var(--text-2);font-size:.92rem">
+              ${content}
+            </div>
+            ${tags ? `<div class="pills" style="margin-top:1.5rem">${tags}</div>` : ''}
+          </div>
+        `;
+        document.body.appendChild(overlay);
+        document.body.style.overflow = 'hidden';
+        lucide.createIcons();
+
+        overlay.addEventListener('click', e => {
+          if (e.target === overlay) {
+            overlay.remove();
+            document.body.style.overflow = '';
+          }
+        });
+      };
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        await renderDynamicPosts();
+
+        // Category filtering (works on both dynamic + static cards)
+        const filters = document.querySelectorAll('.blog-filter');
+        filters.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filters.forEach(f => f.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            document.querySelectorAll('.blog-card').forEach(card => {
+              if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = '';
+                card.style.animation = 'blogFadeIn .4s var(--ease) forwards';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
