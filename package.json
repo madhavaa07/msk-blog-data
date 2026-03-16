@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Madhavaa's Cybersecurity Portfolio - Static HTML/CSS/JS Website",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.0"
+  },
+  "keywords": [
+    "portfolio",
+    "cybersecurity",
+    "static-website"
+  ],
+  "author": "Madhavaa",
+  "license": "MIT"
+}
