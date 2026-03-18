@@ -10,15 +10,16 @@ const experiences = [
     role: 'Sr. Information Security Analyst',
     years: 'Sep 2025 — Present',
     details: [
-      'Took ownership of the full SSP for an Azure-hosted project management platform from day one, documenting every control from access management to encryption — auditors came back with zero follow-up questions after the first review cycle.',
+      'Written, reviewed, and maintained the full SSP and IT control documentation for an Azure-hosted project management platform, partnering with development and business stakeholders to ensure governance across IAM, vulnerability management, patching, firewall configurations, and secure application lifecycle practices — auditors raised only minor clarifications during the first review cycle, with over 95% of controls accepted as-is.',
+      'Managed and supported end-to-end Azure cloud environments including provisioning, configuration, monitoring, and security validation of VMs, App Services, Storage Accounts, Key Vault, Azure Communication Services, Entra ID, and Application Insights, ensuring secure and compliant operations.',
       'Drove end-to-end NIST RMF activities from FIPS 199 security categorization through continuous monitoring, which directly helped the application clear its ATO milestone two weeks ahead of schedule.',
       'Mapped over 200 implemented security controls to NIST SP 800-53 families and built a traceability matrix that cut audit prep time by roughly 40% compared to the previous cycle.',
-      'Took charge of the POA&M register and worked hand-in-hand with engineering to close out 15 open findings in under two months, bringing the remediation backlog down to near zero.',
-      'Designed system boundary diagrams, data flow diagrams, and trust boundary visuals in Visio and Draw.io that became the go-to reference for both technical teams and leadership.',
-      'Led FedRAMP-aligned audit readiness assessments by personally collecting and validating evidence across Azure resources — RBAC configs, Key Vault access policies, storage encryption.',
-      'Set up continuous monitoring dashboards in Power BI that gave leadership real-time visibility into control effectiveness, open risks, and remediation status.',
-      'Facilitated weekly risk review meetings with cross-functional stakeholders, turning vague security concerns into documented action items that reduced average finding resolution time by 25%.',
-      '<b>Environment:</b> Azure (VMs, App Services, Key Vault, Entra ID, Application Insights), Power BI, Draw.io, MS Visio, NIST SP 800-53.'
+      'Took charge of the POA&M register and worked hand-in-hand with engineering to close out 15 open findings in under two months, with only 2-3 items requiring extended remediation timelines.',
+      'Created and maintained system boundary, high-level architecture, trust boundary, and information flow diagrams using Draw.io and MS Visio, clearly illustrating application components, Azure services, data flows, and applied security controls for stakeholder and audit review.',
+      'Led FedRAMP-aligned audit readiness and compliance assessments by collecting, validating, and organizing evidence related to Azure resources, application deployments, architecture reviews, and cloud security controls.',
+      'Developed security, audit, and compliance dashboards using Power BI and Excel, consolidating incident, change, access review, and remediation data to provide leadership visibility into KPIs and overall security posture.',
+      'Facilitated weekly risk review meetings with cross-functional stakeholders, turning vague security concerns into documented action items that reduced the average finding resolution time by 25%.',
+      '<b>Environment:</b> Azure (VMs, App Services, Key Vault, ACS, Entra ID, Application Insights), Power BI, Draw.io, MS Visio, MS Project, MS-Suite, NIST SP 800-53.'
     ]
   },
   {
@@ -26,64 +27,73 @@ const experiences = [
     role: 'Sr. Information Security Engineer Analyst',
     years: 'Dec 2021 — Sep 2025',
     details: [
-      'Authored and maintained System Security Plans for FISMA-regulated enterprise healthcare platforms across cloud and on-prem environments, covering NIST SP 800-53, MARS-E, and ARC-AMPE requirements for multiple state customer programs.',
-      'Developed golden templates with pre-built control descriptions for cloud and non-cloud environments, standardizing SSP drafting and cutting drafting time by about 30%.',
-      'Created an SOP that walked new team members through the full documentation lifecycle, cutting ramp-up time for new analysts from weeks to days.',
-      'Led risk assessments and gap analyses across information systems, identifying real control deficiencies and working directly with system owners to build actionable remediation plans.',
-      'Documented risks and mitigation strategies in RSA Archer, keeping everything traceable and audit-ready so compliance reviews went smoothly every time.',
-      'Tracked and drove POA&M remediation activities — personally closed out 90%+ of findings within their target timelines.',
-      'Worked closely with CISOs, ISSOs, and system engineers to gather control evidence and validate security implementations against production deployments.',
-      'Supported A&A processes by preparing authorization package artifacts including SSPs, SARs, and POA&M updates, helping three major systems achieve ATO approvals on time with no rework.',
-      'Built a technical writing style guide that standardized security documentation across the entire program.',
-      'Partnered with cloud infrastructure teams to validate secure configurations across Azure, AWS, and GCP, ensuring alignment with MARS-E, HIPAA, and NIST frameworks.',
-      'Stood up a quarterly control effectiveness review process that caught configuration drift early, preventing two potential audit findings before they reached assessors.',
-      '<b>Environment:</b> RSA Archer, Azure, AWS, GCP, Power BI, ServiceNow, JIRA, NIST SP 800-53, FISMA, MARS-E, ARC-AMPE, HIPAA.'
+      'Written, developed, and maintained System Security Plans (SSPs) for FISMA-regulated enterprise healthcare platforms across cloud and on-prem environments, compliant with NIST SP 800-53, NIST SP 800-55 rev5, MARS-E, and ARC-AMPE for multiple state customer programs.',
+      'Gathered technical configurations, control evidence, and system documentation required for security and privacy control writing by working with CISOs, ISSOs, system owners, developers, and infrastructure teams.',
+      'Conducted gap assessments to evaluate implementation and effectiveness of security and privacy controls across information systems, identifying real deficiencies and building remediation plans that actually got executed.',
+      'Documented risks, remediation plans, and mitigation strategies within RSA Archer, ensuring traceability and audit readiness — used RSA Archer to verify policies and procedures and update them in the SSP as per control requirements.',
+      'Tracked and managed POA&M remediation activities by coordinating across engineering teams to resolve identified control deficiencies — personally closed out 90%+ of findings within their target timelines.',
+      'Supported A&A processes by preparing authorization package artifacts including SSPs, SARs, and POA&M updates, helping three major systems achieve their ATO approvals on time with under 5% of artifacts requiring revision.',
+      'Developed golden templates with pre-built control descriptions for cloud and non-cloud environments, standardizing how the documentation team wrote SSPs and cutting drafting time by about 30%.',
+      'Created an SOP that walked new team members through the full documentation lifecycle from onboarding to final delivery, cutting ramp-up time for new analysts from weeks to days.',
+      'Built a technical writing style guide that standardized security documentation across the entire program, so every SSP and control description read consistently regardless of which analyst wrote it.',
+      'Partnered with cloud infrastructure teams to validate secure configurations across Azure, AWS, and GCP, ensuring adherence to MARS-E, ARC-AMPE, HIPAA, and NIST frameworks.',
+      'Created automation solutions and structured reports using MS Office and Power BI to showcase documentation progress and compliance status to leadership.',
+      '<b>Environment:</b> RSA Archer, Azure, AWS, GCP, Power BI, MS-Suite, ServiceNow, JIRA, NIST SP 800-53, FISMA, MARS-E, ARC-AMPE, HIPAA.'
     ]
   },
   {
     company: 'Infinity Education Consultants',
-    role: 'IT Security Analyst',
+    role: 'Sr. Reporting Analyst',
     years: 'Jul 2020 — Sep 2021',
     details: [
-      'Owned identity and access governance for an Azure PaaS-hosted CRM, designing RBAC models and enforcing least-privilege across Dev, Test, and Production — eliminated two segregation-of-duty violations that had gone unnoticed for months.',
-      'Implemented Conditional Access policies and MFA enforcement through Azure Entra ID, reducing unauthorized access attempts by over 60% within the first quarter.',
-      'Monitored authentication events and identity-related alerts using Microsoft Sentinel and Log Analytics, catching privilege escalation attempts before they turned into real incidents.',
-      'Ran periodic user access certifications with business stakeholders, cleaning up inactive accounts and privilege creep across multiple release cycles.',
-      'Prepared IAM evidence packages and control effectiveness documentation for internal audits, resulting in zero critical findings across two consecutive audit cycles.',
-      'Embedded secure identity controls into the CRM development lifecycle, working alongside DevOps to maintain secure configuration baselines for Azure PaaS components.',
-      'Built an automated access review dashboard in Power BI that cut the quarterly review process from two weeks down to three days.',
-      '<b>Environment:</b> Azure (Entra ID, Sentinel, Defender for Cloud), Microsoft 365, IAM, RBAC, Log Analytics, Power BI.'
+      'Managed end-to-end identity and access governance for a company-owned CRM hosted on Azure PaaS, ensuring secure role design, provisioning, and deprovisioning aligned with least-privilege and Zero Trust principles.',
+      'Designed and maintained Azure Entra ID RBAC models for CRM users, service principals, and integrated PaaS components, enforcing segregation of duties across Dev, Test, and Production environments.',
+      'Implemented and enforced MFA and Conditional Access policies, strengthening authentication controls for internal users, remote employees, and privileged accounts — reducing unauthorized access attempts by over 60%.',
+      'Monitored authentication activity and identity-related alerts using Microsoft Sentinel, Azure Activity Logs, and Log Analytics, identifying anomalous login behavior, privilege escalation, and suspicious access patterns.',
+      'Conducted periodic user access certifications with business stakeholders to eliminate privilege creep, inactive accounts, and excessive permissions that had quietly accumulated over multiple release cycles.',
+      'Supported internal audits by preparing IAM evidence packages, documenting control effectiveness, and remediating identified access gaps — resulting in only low-risk observations and no critical or high-severity findings across two consecutive audit cycles.',
+      'Collaborated with DevOps and cloud teams to embed secure identity controls into the CRM SDLC, maintaining secure configuration baselines for all Azure PaaS components.',
+      '<b>Environment:</b> Azure (Entra ID, Sentinel, Defender for Cloud), Microsoft 365, MS-Suite, IAM, RBAC, Log Analytics, Power BI.'
     ]
   },
   {
     company: 'Jxtapose',
-    role: 'Security Analyst',
+    role: 'Sr. Reporting Analyst',
     years: 'May 2019 — Jul 2020',
     details: [
-      'Led technology and information security governance across cloud applications, CRM platforms, payment systems, and physical security infrastructure for a growing co-working space business.',
-      'Wrote security policies, SOPs, and governance documentation covering data protection, access control, and incident response that became the foundation every team operated from.',
-      'Conducted internal risk assessments across IT systems and SaaS tools, identifying real vulnerabilities and implementing mitigations that brought overall risk exposure score down by 35%.',
-      'Managed RBAC and access lifecycle for HubSpot CRM and Mailchimp, running periodic access reviews that eliminated privilege creep across sales, marketing, and operations teams.',
-      'Led the company\'s first formal incident response tabletop exercise, which exposed three gaps in the escalation process and resulted in a revised playbook that cut average response time by 40%.',
-      '<b>Environment:</b> Azure, Sentinel, NIST SP 800-53, IAM, HubSpot, Power BI, Incident Response.'
+      'Led end-to-end technology and information security governance for Jxtapose co-working spaces, overseeing cloud applications, CRM platforms, marketing systems, payment processing, and physical security infrastructure.',
+      'Administered and secured HubSpot CRM and Mailchimp, managing user provisioning and deprovisioning, enforcing RBAC, and ensuring least-privilege access across sales, marketing, and operations teams.',
+      'Developed and maintained security policies, SOPs, and governance documentation covering data protection, access control, and incident response that became the operational foundation for every team.',
+      'Conducted internal risk assessments across IT systems, SaaS tools, and physical infrastructure, identifying vulnerabilities and implementing mitigations that brought risk exposure down by 35%.',
+      'Performed vendor security assessments for third-party SaaS providers, evaluating data protection controls and operational risk exposure before approving integrations.',
+      'Led reporting, compliance, and digital marketing documentation projects for 8 clients across industries.',
+      'Developed Power BI dashboards and SQL-based reports to track campaign performance and operational KPIs.',
+      'Automated reporting workflows using Excel VBA, reducing errors and manual workload.',
+      'Configured SharePoint Online sites and workflows for client reporting, document management, and collaboration.',
+      'Applied Agile methodologies (Sprint planning, stand-ups, retrospectives) to manage multiple client projects simultaneously.',
+      '<b>Environment:</b> Azure, Sentinel, NIST SP 800-53, IAM, HubSpot, SQL, Power BI, MS-Suite, Incident Response.'
     ]
   },
   {
     company: 'Storyqube / Voiceqube',
-    role: 'Security Analyst',
+    role: 'AWS Cloud Security Engineer',
     years: 'Oct 2018 — Apr 2019',
     details: [
-      'Developed and enforced access control policies for the Voiceqube application platform, defining role-based permissions for end users, story builders, and administrators governing onboarding workflows and content access.',
-      'Built security policies covering both the application layer and underlying AWS infrastructure — S3 bucket hardening, IAM policy tightening, and encryption standards that eliminated three critical exposure risks flagged during a penetration test.',
-      'Created compliance-aligned documentation for user onboarding and story builder onboarding processes, ensuring data handling, consent, and access provisioning met internal security standards.',
-      'Contributed to product strategy discussions from a security and compliance perspective, embedding privacy-by-design principles into new feature rollouts for the voice-based mobile platform.',
-      'Set up centralized logging and monitoring using CloudTrail and CloudWatch, giving the team real visibility into access patterns and suspicious activity for the first time since the platform launched.',
-      '<b>Environment:</b> AWS (S3, IAM, CloudTrail, CloudWatch), SIEM (Splunk, QRadar), Nessus.'
+      'Engineered and enforced cloud security controls for a voice-based mobile application platform hosted in AWS, securing core services including S3, IAM, API integrations, and logging infrastructure.',
+      'Hardened AWS S3 buckets by implementing encryption at rest (SSE-S3/SSE-KMS), bucket policies, access control lists, and public access blocking to prevent data exposure.',
+      'Designed and maintained secure IAM role and policy architectures, enforcing least-privilege access for developers, service accounts, and third-party integrations.',
+      'Implemented centralized logging and monitoring using AWS CloudTrail and CloudWatch, enabling detection of anomalous access patterns, privilege escalation, and suspicious activity.',
+      'Conducted threat modeling and security reviews for new voice application features, mobile integrations, and content onboarding workflows, identifying attack surfaces and mitigating risks prior to production release.',
+      'Supported incident and problem management processes for AWS cloud environments using Agile and ITIL frameworks.',
+      'Conducted root cause analysis to address recurring security and performance issues.',
+      'Created security documentation, reports, and workflows to support leadership and compliance teams.',
+      'Configured monitoring dashboards using Power BI, Power Query, and Excel for real-time reporting.',
+      '<b>Environment:</b> AWS (S3, IAM, CloudTrail, CloudWatch), SIEM (Splunk, QRadar), Nessus, SQL, Power BI, MS-Suite, NIST RMF, FISMA, ISO 27001.'
     ]
   },
   {
     company: 'Wipro / Google',
-    role: 'Associate — Geospatial Data Operations',
+    role: 'Associate',
     years: 'Oct 2017 — Oct 2018',
     details: [
       'Verified and enriched geospatial datasets across 5+ map enhancement projects, consistently hitting top-tier quality and production scores that earned recognition from project leadership.',
